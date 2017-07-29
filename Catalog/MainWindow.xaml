@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Catalog"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="849.392" Width="1232.909" WindowState="Maximized">
     <Grid>
-        
+        <Button Content="Button" HorizontalAlignment="Left" Margin="405,519,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Height="19"/>
+        <Label Content="Books" Name="BtnBook"  HorizontalAlignment="Left" Margin="242,72,0,0" VerticalAlignment="Top"/>
+        <ListBox Name="ListBook" HorizontalAlignment="Left" Height="232" Margin="220,158,0,0" VerticalAlignment="Top" Width="292"/>
+
     </Grid>
 </Window>
