@@ -47,13 +47,25 @@ namespace Catalog
                 DataTable bookTable = new DataTable();
                 adapter.Fill(bookTable);
 
-                ListBook.DisplayMemberPath = "Title";
+                //ListBook.DisplayMemberPath = "Title";
                 //ListBook.SelectedValuePath = "Author"; -- ha van foreignkey sztem akkor kell ez a cuccos
                 //ListBook.DisplayMemberPath = "Author";
                 //ListBook.DisplayMemberPath = "Genre";
 
                 //ListBook.ItemsSource = bookTable.Rows;
                 ListBook.ItemsSource = bookTable.DefaultView;
+            }
+        }
+
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
+            string query = "INSERT INTO Book (Id, Title, Author, Genre) VALUES (10,'" + NewBook.Text + "', 'new', 'ssss') ";
+            using (connection = new SqlConnection(connectionString)) //using will close the object automatically ---> it implements high disposable
+            using (SqlCommand command=new SqlCommand(query, connection))
+            {
+                connection.Open();
+                //command.Parameters.AddWithValue("@NewBook", NewBook.Text); -- ha paraméterekkel csinlnánk
+                command.ExecuteScalar();
             }
         }
     }

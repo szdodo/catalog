@@ -7,9 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="849.392" Width="1232.909" WindowState="Maximized">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="405,519,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Height="19"/>
+        <Button Name="Show" Content="Show" HorizontalAlignment="Left" Margin="220,444,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Height="25"/>
         <Label Content="Books" Name="BtnBook"  HorizontalAlignment="Left" Margin="242,72,0,0" VerticalAlignment="Top"/>
-        <ListBox Name="ListBook" HorizontalAlignment="Left" Height="232" Margin="220,158,0,0" VerticalAlignment="Top" Width="292"/>
+        <ListBox  HorizontalAlignment="Left" Height="232" Margin="220,158,0,0" VerticalAlignment="Top" Width="292"/>
+        <DataGrid Name="ListBook" AutoGenerateColumns="TRUE" HorizontalAlignment="Left" Height="292" Margin="688,98,0,0" VerticalAlignment="Top" />
+        <TextBox Name="NewBook" HorizontalAlignment="Left" Height="23" Margin="220,596,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button Name="Add" Content="Add" HorizontalAlignment="Left" Margin="492,596,0,0" VerticalAlignment="Top" Width="75" Click="Add_Click"/>
 
     </Grid>
 </Window>
